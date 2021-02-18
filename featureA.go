@@ -4,28 +4,19 @@ func main() {
 
 }
 
-// func maximumSum(arr []int) int {
-// 	result := 0
-// 	for index := 0; index < len(arr); index++ {
-// 		for jindex := index; jindex < len(arr)-index; jindex++ {
+func maksimumTotal(arr []int, k int) (nilai int) {
+	for index := 0; index < len(arr)-(k-1); index++ {
+		result := 0
+		for indexes := k - 1; indexes >= 0; indexes-- {
+			result += arr[index+indexes]
+		}
+		if result > value {
+			value = result
+		}
+	}
 
-// 		}
-// 	}
-// }
-
-// func maximumSum(arr []int, k int) (value int) {
-// 	for index := 0; index < len(arr)-(k-1); index++ {
-// 		result := 0
-// 		for indexes := k - 1; indexes >= 0; indexes-- {
-// 			result += arr[index+indexes]
-// 		}
-// 		if result > value {
-// 			value = result
-// 		}
-// 	}
-
-// 	return value
-// }
+	return nilai
+}
 
 // type Coded struct {
 // 	name string
